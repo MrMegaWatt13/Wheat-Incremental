@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap" rel="stylesheet">
+    <title>Wheat Incremental</title>
+</head>
+<body>
+
+    <h3 class="WHEAT">Wheat: <span id="wheat">0</span></h3>
+    <h3 class="XP">LVL: <span id="xplvl">0</span></h3>
+    <h5 class="XP">[<span id="xp">0</span> / <span id="xpCost">10</span>]</h5>
+    <button class="gainButton" onclick="gain()">Cut Wheat</button>
+    <h3 class="WHEAT">[<span id="spawnedWheat">0</span> / <span id="cappedWheat">0</span>] Wheat</h3>
+
+    <h3 class="XP">Perk Upgrades</h3>
+
+    <h5 class="XP">Perks: <span id="perk">0</span></h5>
+    <h3><span id="wheatPerk">0</span> / 50</h3>
+    <button class="PerkUpgrades" onclick="BuywheatPerk()">Wheat (Perk Upgrade)</button>
+    <h5>Effect: Increases Wheat Gain by 25%</h5>
+    <h5>Cost: <span id="wheatPerkCost">1</span> Perk</h5>
+
+    <h3><span id="xpPerk">0</span> / 50</h3>
+    <button class="PerkUpgrades" onclick="BuyxpPerk()">XP (Perk Upgrade)</button>
+    <h5>Effect: Increases XP Gain by 25%</h5>
+    <h5>Cost: <span id="xpPerkCost">1</span> Perk</h5>
+
+    <h3><span id="capPerk">0</span> / 25</h3>
+    <button class="PerkUpgrades" onclick="BuycapPerk()">More Cap (Perk Upgrade)</button>
+    <h5>Effect: Increases Wheat Cap by 20%</h5>
+    <h5>Cost: <span id="capPerkCost">1</span> Perk</h5>
+
+    <h3><span id="spawnPerk">0</span> / 20</h3>
+    <button class="PerkUpgrades" onclick="BuyspawnPerk()">Spawn Rate(Perk Upgrade)</button>
+    <h5>Effect: Increases Spawn Rate by 20%</h5>
+    <h5>Cost: <span id="spawnPerkCost">1</span> Perk</h5>
+
+
+
+
+    <h3 class="WHEAT">Wheat Upgrades</h3>
+
+    <h3><span id="wheatWU">0</span> / 100</h3>
+    <button class="WheatUpgrades" onclick="BuywheatWU()">Wheat (Wheat Upgrade)</button>
+    <h5>Effect: Increases Wheat Gain by 100%</h5>
+    <h5>Cost: <span id="wheatWUCost">20</span> Wheat</h5>
+
+    <h3><span id="xpWU">0</span> / 100</h3>
+    <button class="WheatUpgrades" onclick="BuyxpWU()">XP (Wheat Upgrade)</button>
+    <h5>Effect: Increases XP Gain by 100%</h5>
+    <h5>Cost: <span id="xpWUCost">50</span> Wheat</h5>
+
+    <h3><span id="capWU">0</span> / 50</h3>
+    <button class="WheatUpgrades" onclick="BuycapWU()">More Cap (Wheat Upgrade)</button>
+    <h5>Effect: Increases Wheat Cap by 20%</h5>
+    <h5>Cost: <span id="capWUCost">100</span> Wheat</h5>
+
+    <h3><span id="spawnWU">0</span> / 50</h3>
+    <button class="WheatUpgrades" onclick="BuyspawnWU()">Spawn Rate (Wheat Upgrade)</button>
+    <h5>Effect: Increases Spawn Rate by 20%</h5>
+    <h5>Cost: <span id="spawnWUCost">250</span> Wheat</h5>
+
+
+
+
+
+    <h3>Prestige</h3>
+    <h5>Reach LVL <span id="prestigeCost">30</span> to Prestige</h5>
+    <button class="PrestigeUpgrades" onclick="Prestige()">Prestige!</button>
+    <h5>You will gain <span id="gainPrestige">1</span> Prestigepoints</h5>
+    <h3 class="PRESTIGE">Prestige Upgrades</h3>
+    <h5 class="PRESTIGE">Prestigepoints: <span id="prestigepoint">0</span></h5>
+
+    <h3><span id="cutPSU">0</span> / 5</h3>
+    <button class="PrestigeUpgrades" onclick="BuycutPSU()">Extra Cuts (Prestige Upgrade)</button>
+    <h5>Effect: Increases Wheat Cut by 100%</h5>
+    <h5>Cost: <span id="cutPSUCost">5</span> Prestigepoint</h5>
+     
+
+
+
+    <div id="Stats">
+    <h3>Settings</h3>
+    <h3>Stats:</h3>
+
+    <h3>Wheat</h3>
+    <h5>Wheat Base: <span id="gainWheat">1</span></h5>
+    <h5>Upgrades: <span id="UpgradesWheatTotal">1</span>x</h5>
+    <h5>Prestige: <span id="prestigeW">1</span>x</h5>
+    <h5>Total Wheat Gain: <span id="wheatTotal">1</span></h5>
+
+    <h3>XP</h3>
+    <h5>XP Gain: <span id="gainXP">1</span></h5>
+    <h5>Upgrades: <span id="UpgradesXPTotal">1</span>x</h5>
+    <h5>Prestige: <span id="prestigeX">1</span>x</h5>
+    <h5>Total XP Gain: <span id="xpTotal">1</span></h5>
+
+    <h3>Wheat Spawn</h3>
+    <h5>Total Spawn Rate: <span id="spawnWheat">1</span> Wheat/s</h5>
+    <h5>Total Cuts: <span id="cutWheat">1</span></h5>
+
+    <h3>Prestige</h3>
+    <h5>Prestige: <span id="prestige">0</span></h5>
+    <button onclick="TB1(Infinity)">Test</button>
+    </div>
+    <div id="Version">
+    <h3>Patch Notes (v 0.1.3)</h3>
+    <h5>- Fixed Capped Wheat Upgrade</h5>
+    <h5>- Changed All Wheat Upgrades</h5>
+    <h5>- Changed Font Family</h5>
+    <h5>- Changed Buttons And Text Size</h5>
+    <h5>- Added Hover Effect To Buttons</h5>
+    <h5>- Added New Wheat and Perk Upgrades</h5>
+    <h5>- Amount Of Prestiges Multiply Your Wheat and XP now</h5>
+    <h5>v 0.1.3</h5>
+    </div>
+
+    <script text="text/javascript" src="script.js"></script>
+</body>
+</html>
