@@ -1,3 +1,60 @@
+button{
+    touch-action: manipulation;
+    border: 2px solid black;
+    background-color: white;
+    /*height: 35px;*/
+    font-size: 20px;
+    font-family: 'Gemunu Libre', sans-serif;
+    color: black; 
+    width: 100%;
+    height: 35px;
+}
+button:hover{ 
+    box-shadow: 0px 0px 1px 1px black;
+    border: 3px solid black;
+    transition: 0.1s;
+}
+button:active{
+    box-shadow: 0px 0px 3px 3px black;
+    border: 5px solid black;
+    background-color: black;
+    color: white;
+    transition: 0.2s;
+}
+h3{
+    font-size: 32px;
+}
+h5{
+    font-size: 20px;
+ }
+body {
+    background-color: whitesmoke;
+    font-family: 'Gemunu Libre', sans-serif;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 17px;
+    /*text-align: center;*/
+}
+textarea{
+    border: none;
+    color: white;
+    background-color: black;
+    width: 500px;
+    height: 25px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .WHEAT{
     color: #f5d442;
 }
@@ -9,57 +66,83 @@
 .PRESTIGE{
     color: #0fd9d5; 
 }
-button{
-    touch-action: manipulation;
-    border: 2px solid black;
-    font-size: 20px;
-    font-family: 'Gemunu Libre', sans-serif;
-    color: black; 
-}
-button:hover{
-    background-color: gray;
-    box-shadow: 0px 0px 2px 2px black;
-    transition: 0.2s;
-}
-button:active{
-    background-color: whitesmoke;
-}
 .PerkUpgrades{
     background-color: #05fae5;
-    width: 300px;
-    height: 35px;
 }
 
 .WheatUpgrades{
     background-color: #f5d442;
-    width: 300px;
-    height: 35px;
 }
 
 .PrestigeUpgrades{
     background-color: #03fcf0;
-    width: 300px;
-    height: 35px;
+}
+.TAC{
+    text-align: center;
+}
+.AH3{
+    font-size: 24px;
+}
+.AH5{
+    font-size: 15px;
 }
 
-.gainButton{
-    background-color: white;
-    width: 300px;
-    height: 35px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 #Stats{
     margin-top: 250px;
 }
 #Version{
     margin-top: 250px;
 }
-h3{
-   font-size: 28px;
+#warning{
+    color: red; 
 }
-h5{
-    font-size: 20px;
- }
-body {
+#mainText{
+    text-align: center;
+    color: #f5d442;
+}
+#achievements{
+    width: 100%;
+    border: 5px solid black;
+}
+#wheatMainText{
+    position: fixed;
     background-color: whitesmoke;
-    font-family: 'Gemunu Libre', sans-serif;
+    min-width: 100%;
+    height: 75px;
 }
+#wheatMainText2{
+    position: absolute;
+}
+#xpMainText{
+    position: absolute;
+    margin-left: 44.5%;
+}
+#xpMainText2{
+    position: absolute;
+    margin-left: 58%;
+}
+#settings{
+    text-align: center;
+    font-size: 48px;
+}
+#devConsole{
+    width: 98%;
+    height: 620px;
+    border: 10px solid black;
+    color: white;
+    background-color: black;
+    position: fixed;
+}
+
