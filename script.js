@@ -106,7 +106,7 @@ window.setInterval(function(){
 }, 10);
 
 function xptolvl(){ 
-    var xpCost=  Math.floor(10 * Math.pow(1.1,xplvl));
+    var xpCost=  Math.floor(50 * Math.pow(1.15,xplvl));
     if(xp >= xpCost){                                                                  
         xplvl = xplvl + 1; 
         perk = perk + 1;                                                                  
@@ -114,7 +114,7 @@ function xptolvl(){
         startPrestigeGain(); 
         update();                                                                
     };
-    var nextXPCost = Math.floor(10 * Math.pow(1.1,xplvl));       
+    var nextXPCost = Math.floor(50 * Math.pow(1.15,xplvl));       
     document.getElementById('xpCost').innerHTML = Round(nextXPCost);
 };
 
